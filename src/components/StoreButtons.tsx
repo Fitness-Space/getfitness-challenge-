@@ -1,5 +1,5 @@
 const APP_STORE_URL = "#";
-const GOOGLE_PLAY_URL = "#";
+export const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.fitnessspace.app";
 
 function StoreButton({
   href,
@@ -19,6 +19,7 @@ function StoreButton({
   return (
     <a
       href={href}
+      {...(href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
       className={`flex items-center whitespace-nowrap border bg-black transition hover:border-white/40 ${
         large
           ? `${compact ? "h-12 gap-2.5 px-3" : "h-14 gap-3.5 px-5 [&_svg]:h-6 [&_svg]:w-5 sm:[&_svg]:h-5 sm:[&_svg]:w-[18px]"} rounded-[10px] border-white/25 sm:h-[52px] sm:gap-3 sm:rounded-xl sm:px-4 lg:h-[60px] lg:gap-3.5 lg:rounded-[14px] lg:px-[22px] lg:[&_svg]:h-[26px] lg:[&_svg]:w-[23px]`

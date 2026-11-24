@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footsteps from "./Footsteps";
 import PhoneMockup from "./PhoneMockup";
 import StoreButtons from "./StoreButtons";
+import Ticker from "./Ticker";
 
 // Drop the illustrated character (transparent PNG) at this path and it will appear.
 const CHARACTER_SRC = "/images/hero-character.png";
@@ -31,9 +32,9 @@ export default function Hero() {
         className="pointer-events-none absolute left-1/2 top-[420px] -z-10 size-[520px] -translate-x-1/2 rounded-full bg-brand-dark/25 blur-[110px] lg:-top-48 lg:left-auto lg:right-[-10%] lg:size-[800px] lg:translate-x-0 lg:bg-brand-dark/20 lg:blur-[160px]"
       />
 
-      <div className="relative mx-auto max-w-[1344px] px-6 pb-6 pt-[30px] sm:px-8 sm:pt-6 lg:h-[841px] lg:w-[1280px] lg:max-w-none lg:px-0 lg:py-0 lg:[zoom:0.75] xl:[zoom:0.95] hd:[zoom:1]">
+      <div className="relative mx-auto max-w-[1344px] px-6 pb-6 pt-[30px] sm:px-8 sm:pt-6 lg:h-[630px] lg:w-[1200px] lg:max-w-none lg:px-0 lg:py-0 lg:[zoom:0.75] xl:[zoom:0.95] hd:[zoom:1]">
         {/* copy */}
-        <div className="lg:absolute lg:left-0 lg:top-[115px] lg:w-[620px]">
+        <div className="lg:absolute lg:left-0 lg:top-[75px] lg:w-[620px] lg:[zoom:0.75]">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#FE9A00]/40 bg-[#200E07] px-3 py-1 text-[9.5px] font-bold sm:text-[10px] tracking-[0.1em] text-[#FE9A00] lg:h-[33px] lg:gap-[9px] lg:px-[15px] lg:py-0 lg:text-[13.5px] lg:tracking-[0.1em]">
             <span className="size-1.5 rounded-full bg-[#FE9A00] lg:size-[7px]" />
             30-DAY STEPS CHALLENGE
@@ -52,7 +53,7 @@ export default function Hero() {
         </div>
 
         {/* visual: fixed 670×730 design box */}
-        <div className="relative left-1/2 mt-[200px] h-[730px] w-[670px] -translate-x-1/2 [zoom:0.53] sm:mt-8 sm:[zoom:0.85] md:[zoom:1] lg:absolute lg:left-auto lg:right-0 lg:top-[65px] lg:mt-0 lg:translate-x-0">
+        <div className="relative left-1/2 mt-[200px] h-[730px] w-[670px] -translate-x-1/2 [zoom:0.53] sm:mt-8 sm:[zoom:0.85] md:[zoom:1] lg:absolute lg:left-auto lg:right-0 lg:top-[25px] lg:mt-0 lg:translate-x-0 lg:[zoom:0.75]">
           <div className="absolute left-[128px] top-[17px] size-[554px] rounded-full bg-gradient-to-br from-brand-light to-brand-dark shadow-[0_0_120px_rgba(245,73,0,0.3)]" />
 
           <PhoneMockup className="absolute left-[359px] top-[-23px] rotate-[7deg] scale-[0.875] lg:left-[421px] lg:top-[-14px]" />
@@ -82,6 +83,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <Ticker className="-mt-16 lg:-mt-24" />
     </section>
   );
 }
